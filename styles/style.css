@@ -9,14 +9,20 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
   inline-size: 1200px;
   block-size: 100%;
-  margin: 133px 30px;
+  margin: 15px 0px;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-}
+  }
+
 
 h1,
 h2,
@@ -51,12 +57,14 @@ ol {
 }
 
 .content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 1140px;
-  gap: 30px;
-  height: 534px;
+display: grid;
+grid-template-columns: auto 399px;
+grid-template-areas: 'result choose-video';
+align-content: end;
+align-items: none;
+margin: 133px 30px;
+width: 100%;
+gap: 30px;
 }
 
 .title,
@@ -121,6 +129,7 @@ ol {
 .result {
   width: 711px;
   height: 456px;
+  margin-top: 77px;
 }
 
 .result__video-container {
