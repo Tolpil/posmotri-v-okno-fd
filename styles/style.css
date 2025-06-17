@@ -15,9 +15,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  block-size: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", Arial, sans-serif;
   font-size: 18px;
@@ -67,8 +67,7 @@ ol {
   gap: 30px;
 }
 
-.title,
-.content__accent {
+.title {
   font-family: "Oswald", Arial, sans-serif;
   font-weight: 700;
   font-size: 75px;
@@ -172,18 +171,26 @@ ol {
   border: 2px solid transparent;
 }
 
-.content__video-card:hover,
-.content__video-card:focus {
+.content__card-link:active {
+  text-decoration: none;
+  background: #545050;
+}
+
+.content__card-link_current {
+  background: #545050;
+}
+
+.content__card-link:hover {
   text-decoration: underline;
-  border-color: transparent;
+  text-decoration-skip-ink: none;
 }
 
-.content__video-card:focus-visible {
-  border: 2px solid #fff;
+.content__card-link:focus {
+  outline: none;
 }
 
-.content__video-card:active {
-  background-color: #545050;
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
 }
 
 .content__video-card-thumbnail {
@@ -295,11 +302,6 @@ ol {
   opacity: 1;
 }
 
-.search-form__submit-button {
-  min-width: 194px;
-  align-self: flex-end;
-}
-
 .button {
   display: flex;
   justify-content: center;
@@ -318,8 +320,8 @@ ol {
 }
 
 .search-form__submit-button {
+  align-self: flex-end;
   width: 194px;
-  height: 34px;
 }
 
 .button:active {
@@ -332,6 +334,6 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 2px solid #fff;
+  outline: 1px solid #fff;
   outline-offset: 2px;
 }
